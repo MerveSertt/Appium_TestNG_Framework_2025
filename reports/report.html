@@ -48,7 +48,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Şub 3, 2025 03:29:36 ÖS</span>
+                    <span class="badge badge-primary">Şub 4, 2025 11:34:37 ÖÖ</span>
                 </a>
             </li>
         </ul>
@@ -92,8 +92,8 @@
 					<i class="fa fa-exclamation-circle"></i>
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
 						
+						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
 						
 						
 						
@@ -106,28 +106,28 @@
 		</div>
 		<div class="test-list-wrapper scrollable">
 			<ul class="test-list-item">
-				<li class="test-item"  status="pass" test-id="1"
+				<li class="test-item"  status="fail" test-id="1"
 					author=""
 					tag=""
 					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">testKitapYurdu</p>
-							<p class="duration text-sm">0h 0m 27s+16ms</p>
-							<span class="datetime">15:29:36 ÖS</span>
+							<p class="duration text-sm">0h 0m 22s+680ms</p>
+							<span class="datetime">11:34:37 ÖÖ</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">testKitapYurdu</h5>
-									<span class='badge badge-success'>02.03.2025 15:29:36</span>
-									<span class='badge badge-danger'>02.03.2025 15:30:03</span>
-									<span class='badge badge-default'>0h 0m 27s+16ms</span>
+									<h5 class="test-status text-fail">testKitapYurdu</h5>
+									<span class='badge badge-success'>02.04.2025 11:34:37</span>
+									<span class='badge badge-danger'>02.04.2025 11:35:00</span>
+									<span class='badge badge-default'>0h 0m 22s+680ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -143,58 +143,30 @@
 	</tr></thead>
 	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>15:30:03</td>
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:34:37</td>
 				<td>
-						Test Successfully Completed.
+						Test başladı.
 				</td>
 			</tr>
-	</tbody>
-</table>
-</div>
-					</div>
-				</li>
-				<li class="test-item"  status="pass" test-id="2"
-					author=""
-					tag=""
-					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
-					</div>
-					<div class="open-test">
-						<div class="test-detail">
-							<p class="name">testKitapyurduNegative</p>
-							<p class="duration text-sm">0h 0m 7s+745ms</p>
-							<span class="datetime">15:30:03 ÖS</span>
-						</div>
-					</div>
-					<div class="test-contents d-none">
-						<div class="detail-head">
-							<div class="p-v-10 d-inline-block">
-								<div class="info">
-									<h5 class="test-status text-pass">testKitapyurduNegative</h5>
-									<span class='badge badge-success'>02.03.2025 15:30:03</span>
-									<span class='badge badge-danger'>02.03.2025 15:30:11</span>
-									<span class='badge badge-default'>0h 0m 7s+745ms</span>
-								</div>
-								<div class="m-t-10 m-l-5">
-									
-								</div>
-							</div>
-						</div>
-<div class="detail-body mt-4">                                              
-<table class="table table-sm">
-	<thead><tr>
-		<th class="status-col">Status</th>
-		<th class="timestamp-col">Timestamp</th>
-		<th class="details-col">Details</th>
-	</tr></thead>
-	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>15:30:11</td>
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:35:00</td>
 				<td>
-						Test Successfully Completed.
+						Test başarısız oldu çünkü: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms 
+Host info: host: 'DESKTOP-DK3IVQF', ip: '192.168.1.126'
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.23'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.mobisoft.kitapyurdu.mai..., appium:appPackage: com.mobisoft.kitapyurdu, appium:automationName: UIAutomator2, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.mobisoft.kitapyurdu.mai..., appium:appPackage: com.mobisoft.kitapyurdu, appium:automationName: UIAutomator2, platformName: ANDROID}
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:35:00</td>
+				<td>
+						Test başarısız oldu çünkü: null
 				</td>
 			</tr>
 	</tbody>
@@ -233,12 +205,12 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'>
-						<b>2</b> tests passed
+					<div><small data-tooltip='0%'>
+						<b>0</b> tests passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> tests failed, 
+						<small data-tooltip='100%'><b>1</b> tests failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -256,10 +228,10 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'><b>2</b> events passed</small></div>
+					<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> events failed, 
-						<b data-tooltip='0%'>0</b> others
+						<small data-tooltip='66,667%'><b>2</b> events failed, 
+						<b data-tooltip='33,333%'>1</b> others
 						</small>
 					</div>
 				</div>
@@ -273,10 +245,10 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Tests</h6>
-							<h2 class="font-size-28 font-weight-light mt-3">2</h2>
+							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>100,00%</span>
+							<span>,00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -292,7 +264,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Şub 3, 2025 03:29:36 ÖS</h4>
+							<h4 class="font-weight-light mt-4">Şub 4, 2025 11:34:37 ÖÖ</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -308,7 +280,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 0m 34s+950ms</h4>
+							<h4 class="font-weight-light mt-4">0h 0m 22s+801ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -361,14 +333,14 @@
 </div>
 <script>
 	var statusGroup = {
-	    parentCount: 2,
-		passParent: 2,
-		failParent: 0,
+	    parentCount: 1,
+		passParent: 0,
+		failParent: 1,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 0,
+		exceptionsParent: 1,
 		childCount: 0,
 		passChild: 0,
 		failChild: 0,
@@ -389,21 +361,21 @@
 		infoGrandChild: 0,
 		debugGrandChild: 0,
 		exceptionsGrandChild: 0,
-		eventsCount: 2,
-		passEvents: 2,
-		failEvents: 0,
+		eventsCount: 3,
+		passEvents: 0,
+		failEvents: 2,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
 		skipEvents: 0,
-		infoEvents: 0,
+		infoEvents: 1,
 		debugEvents: 0,
 		exceptionsEvents: 0
 	};
 </script>
 <script>
 	var timeline = {
-	        "testKitapYurdu":27.016,"testKitapyurduNegative":7.745
+	        "testKitapYurdu":22.68
 	};
 </script>
                 </div>

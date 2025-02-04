@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 import static kitapyurdu.utils.Driver.driver;
+import static kitapyurdu.utils.ExtentReport.informationNotes;
 
 public class HomePage extends ReusebleMethods{
     public HomePage() {
@@ -43,6 +44,7 @@ public class HomePage extends ReusebleMethods{
         ReusebleMethods.visibleWait(driver,swipeElement,15);
         ReusebleMethods.swipeGesture(driver,swipeElement,"left",1.0,1000);
         ReusebleMethods.clickGesture(driver,fifthBook);
+        informationNotes("5. ürün seçildi.");
         ReusebleMethods.scrollGesture(driver,scrollElement,"down",2.0,1000);
 
         for (int i = 0; i < titleKunye.size(); i++) {
@@ -50,5 +52,6 @@ public class HomePage extends ReusebleMethods{
             System.out.println(informationKunye.get(i).getText());
         }
 
+        informationNotes("Seçilen urunun kunye bilgisi yazdırıldı.");
     }
 }

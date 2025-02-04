@@ -12,31 +12,33 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 
-import static kitapyurdu.utils.Driver.closeApp;
-import static kitapyurdu.utils.Driver.driver;
+import static kitapyurdu.utils.ConfigReader.getProperty;
+import static kitapyurdu.utils.Driver.*;
 import static kitapyurdu.utils.ExtentReport.*;
 
 public class Listeners implements ITestListener{
 
     @Override
     public void onStart(ITestContext context) {
+        serverBaslat(getProperty("localIPAdres"), Integer.parseInt(getProperty("localPort")));
         createReport();
     }
 
     @Override
     public void onTestStart(ITestResult result) {
         createTest(result.getMethod().getMethodName());
+        test.info("Test başladı.");
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        test.log(Status.PASS,"Test Successfully Completed.");
+        test.log(Status.PASS,"Test Başarıyla tamamlandı.");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         //Failed message
-        test.fail(result.getThrowable().getMessage());
+        test.fail("Test başarısız oldu çünkü: "+result.getThrowable().getMessage());
 
         //Screenshot
         File file = driver.getScreenshotAs(OutputType.FILE);
@@ -59,7 +61,9 @@ public class Listeners implements ITestListener{
 
     @Override
     public void onFinish(ITestContext context) {
+        closeApp();
         saveReport();
+        serverKapat();
     }
 
 

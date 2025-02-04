@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import static kitapyurdu.utils.ExtentReport.informationNotes;
+
 
 public class Register extends ReusebleMethods {
 
@@ -58,46 +60,58 @@ String fakeMail = faker.internet().emailAddress();
 
     public void hesabimSayfasinaGit(){
         hesabim.click();
+        informationNotes("Hesabım butonuna tıklandı.");
     }
 
     public void uyeOlButonunaTikla(){
         uyeOl.click();
+        informationNotes("Uye ol butonuna tıklandı.");
     }
 
-    public void isimGir(){
-        isim.sendKeys("Any name");
+    public void isimGir(String name){
+        isim.sendKeys(name);
+        informationNotes("İsim kutusuna "+name+" ismi girildi.");
+
     }
 
-    public void soyisimGir(){
-        soyad.sendKeys("Any lastname");
+    public void soyisimGir(String lastName){
+        soyad.sendKeys(lastName);
+        informationNotes("Soyisim kutusuna "+lastName+" soyismi girildi.");
     }
 
-    public void emailGir(){
-        email.sendKeys("laden.farren@");
+    public void emailGir(String Email){
+        email.sendKeys(Email);
+        informationNotes("Email kutusuna "+Email+"'i girildi.");
     }
 
-    public void sifreGir(){
-        sifre.sendKeys("123456.s");
+    public void sifreGir(String password){
+        sifre.sendKeys(password);
+        informationNotes("Şifre kutusuna "+password+" girildi.");
     }
 
-    public void sifreTekrari(){
-        sifreTekrari.sendKeys("123456.s");
+    public void sifreTekrari(String password){
+        sifreTekrari.sendKeys(password);
+        informationNotes("Şifre kutusuna "+password+" tekrar girildi.");
     }
 
     public void checkBoxIsaretle(){
         checkBox.click();
+        informationNotes("Checkbox seçildi.");
     }
 
     public void uyeOl(){
         uyeOlButonu.click();
+        informationNotes("Uye ol butonuna tıklandı");
     }
 
     public void mailHataMesajiAliniginiDogrula(){
         Assert.assertEquals(failedMessage.getText(), "E-posta adresiniz geçersizdir.");
+        informationNotes("Hata mesajı alındığı doğrulandı");
     }
 
     public void okButonunaBas(){
         okButton.click();
+        informationNotes("Ok butonuna tıklandı.");
     }
 
 

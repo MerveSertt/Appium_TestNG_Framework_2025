@@ -16,7 +16,5 @@ public class TC01_PositiveTest{
         homePage.chooseBooksFromBestseller();
         KeyEvent back = new KeyEvent(AndroidKey.BACK);
         driver.pressKey(back);
-
-
     }
 }

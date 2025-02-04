@@ -14,11 +14,11 @@ public class TC02_NegativeTest{
 
         register.hesabimSayfasinaGit();
         register.uyeOlButonunaTikla();
-        register.isimGir();
-        register.soyisimGir();
-        register.emailGir();
-        register.sifreGir();
-        register.sifreTekrari();
+        register.isimGir("Any name");
+        register.soyisimGir("Any lastname");
+        register.emailGir("laden.farren@");
+        register.sifreGir("123456.s");
+        register.sifreTekrari("123456.s");
         register.checkBoxIsaretle();
         register.uyeOl();
         register.mailHataMesajiAliniginiDogrula();
