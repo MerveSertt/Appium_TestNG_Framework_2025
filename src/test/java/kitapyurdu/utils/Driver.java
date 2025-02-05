@@ -22,6 +22,7 @@ public class Driver {
 
         if(driver==null) {
             UiAutomator2Options options = new UiAutomator2Options()
+                    .setUiautomator2ServerInstallTimeout(Duration.ofSeconds(60))
                     .setAppPackage(getProperty("appPackage"))
                     .setAppActivity(getProperty("appActivity"));
 
